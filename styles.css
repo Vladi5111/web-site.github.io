@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('background.webp') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.book-page {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* По-прозрачен размазан фон */
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9); /* Леко прозрачен текст за по-добро смесване с фона */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Подчертава текста за по-добра четимост */
+}
+
+.page-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.85); /* Леко прозрачен текст */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.navigation a {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* Стилизация на падащото меню */
+.dropdown {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачен фон */
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* При задържане фонът става по-тъмен */
+}
+
+/* Падащо меню */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачен фон на падащото меню */
+    min-width: 160px;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Лека промяна на цвета при задържане на курсора */
+}
+
+/* Показване на падащото меню при задържане на курсора върху бутона */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Стилове за страницата с героите */
+.characters-page {
+    padding: 40px;
+    background: url('background.webp') no-repeat center center fixed; /* Същия фон като на index.html */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    width: 80%;
+    max-width: 800px;
+    color: #fff; /* Белия текст е по-лесно видим върху тъмния фон */
+    backdrop-filter: blur(5px); /* Размазване на фона за по-добра четимост на текста */
+}
+
+/* Заглавие и текст */
+h1 {
+    text-align: center;
+    color: #ffffff; /* Ярък бял цвят за по-добра четимост */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* Добавяне на сенки, за да изпъкнат текстовете */
+}
+
+/* Подобрени стилове за героите */
+.character {
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачен фон */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.character h2 {
+    color: #ffffff; /* Ярък бял цвят */
+    font-size: 26px; /* Увеличаване на шрифта за по-добро внимание */
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Сенки за контраст */
+}
+
+.character-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.character p {
+    font-size: 18px;
+    color: #000000; /* Ярък бял текст */
+    line-height: 1.8;
+    flex: 1;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Лека сенка, за да се откроява текста */
+}
